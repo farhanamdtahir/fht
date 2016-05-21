@@ -6,6 +6,27 @@
 
     function routesConfig($stateProvider, $urlRouterProvider) {
         $stateProvider
+            .state('login', {
+                url: '/login',
+                templateUrl: 'Login/login.html',
+                controller: 'loginCtrl',
+                controllerAs: 'login'
+            })
+
+            .state('register', {
+                url: '/register',
+                templateUrl: 'Login/register.html',
+                controller: 'registerCtrl',
+                controllerAs: 'register'
+            })
+
+
+
+
+
+
+
+
             .state('tab', {
                 url: '/tab',
                 abstract: true,
@@ -16,9 +37,9 @@
                 url: '/profile',
                 views: {
                     'tab-profile': {
-                        controller: 'profileCtrl',
-                        controllerAs: 'profile',
                         templateUrl: 'Profile/profile.html'
+                        // controller: 'profileCtrl',
+                        // controllerAs: 'profile',
                     }
                 }
             })
@@ -26,9 +47,19 @@
                 url: '/checkin',
                 views: {
                     'tab-checkin': {
-                        controller: 'checkinCtrl',
-                        controllerAs: 'checkin' ,
                         templateUrl: 'Checkin/checkin.html'
+                        // controller: 'checkinCtrl',
+                        // controllerAs: 'checkin' ,
+                    }
+                }
+            })
+            .state('tab.checkin-form', {
+                url: '/checkin/:sickness_id',
+                views: {
+                    'tab-checkin': {
+                        templateUrl: 'Checkin/checkin-form.html'
+                        // controller: 'checkinFormCtrl',
+                        // controllerAs: 'checkin' ,
                     }
                 }
             })
@@ -36,9 +67,9 @@
                 url: '/timeline',
                 views: {
                     'tab-timeline': {
-                        controller: 'timelineCtrl',
-                        controllerAs: 'timeline',
                         templateUrl: 'Timeline/timeline.html'
+                        // controller: 'timelineCtrl',
+                        // controllerAs: 'timeline',
                     }
                 }
             })
@@ -46,14 +77,13 @@
                 url: '/groups',
                 views: {
                     'tab-groups': {
-                        controller: 'groupsCtrl',
-                        controllerAs: 'groups' ,
                         templateUrl: 'Groups/groups.html'
+                        // controller: 'groupsCtrl',
+                        // controllerAs: 'groups' ,
                     }
                 }
             })
-            
-
-            $urlRouterProvider.otherwise('tab/profile');
+        
+            $urlRouterProvider.otherwise('/login');
     }
 })();

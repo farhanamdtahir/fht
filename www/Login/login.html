@@ -1,0 +1,21 @@
+<ion-view view-title="Login">
+  <ion-content class="padding">
+    <form class="list list-inset" ng-submit="login.login()">
+      <img ng-src="assets/img/logo.png" style="width: 300px; height: 150px">
+
+      <label class="item item-input">
+        <input type="text" placeholder="Email" ng-model="login.user.email" required>
+      </label>
+
+      <label class="item item-input">
+        <input type="password" placeholder="Password" ng-model="login.user.password" required>
+      </label>
+        
+      <button type="submit" class="button button-block  button-calm">Login</button>
+      <center>
+        <a ui-sref="register" class=" button button-positive  button-block button-clear ">Or create an account</a>
+      </center>
+    </form>
+  </ion-content>
+</ion-view>
+

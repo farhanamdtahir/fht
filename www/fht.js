@@ -1,17 +1,26 @@
+/*
+    Nota untuk si penulis Javascript
+    1 - Pastikan indentation betul
+        Shortcut : ctrl + [ atau ctrl + ]
+    2 - Pastikan scope curly braces & kurungan merangkumi body yang betul
+        Contoh:
+            var a = {
+                name: "test",
+            }
+
+    3 - Sumber bacaan untuk style guide (https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
+
+*/
+
 (function() {
     angular
         .module("fht", [
             "ionic",
             "ngResource", // Untuk factory mendapatkan data.
-            "fht.profile",
-            "fht.checkin",
-            "fht.timeline",
-            "fht.groups"
-            
         ])
-        .run(init);
+        .run(init)
         .factory("Database", Database);
-
+    
 
     function init($ionicPlatform) {
         $ionicPlatform.ready(function() {
@@ -29,21 +38,21 @@
     }
 
     function Database($resource) {
-        // var url = 'http://192.168.43.193/shoppinggpsserver';
-        var url = 'http://localhost/shoppinggpsserver';
+        // var url = 'http://192.168.43.193/fhtsserver';
+        var url = 'http://localhost/fhtserver';
 
         return {
             profile: function() {
-                return $resource(url + '/personal')
+                return $resource(url + '/user/:action', { action: '@action' });
             },
             timeline: function() {
                 return $resource(url + '/healthdata')
-            }
+            },
             checkin: function() {
                 return $resource(url + '/sickness')
-            }
+            },
             groups: function() {
-                return $resource(url + '/group')
+                return $resource(url + '/groups')
             }
         }
     }

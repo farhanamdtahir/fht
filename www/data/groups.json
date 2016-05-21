@@ -1,8 +1,11 @@
-{
-    "username": "Nurul Farhana",
-    "avatar": "assets/img/logo.png",
-    "email": "farhanamdtahir@gmail.com",
-    "password": "1234",
+[
+    {
+        "id": 1,
+        "name": "Farhana"
+    },
+    {
+        "id": 2,
+        "name": "Munirah"
+    }
 
-    
-}
+]

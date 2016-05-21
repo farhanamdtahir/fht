@@ -1,21 +1,5 @@
 <ion-view view-title="Profile">
-  <ion-content class="padding" ng-controller="rootCtrl">
-
-    <img ng-src="assets/img/logo.png" style="width: 500px; height: 150px">
-    <h1>{{ profile.data.username }}</h1>
-    <p>{{ profile.data.email }}</p>
-
-    <!-- 
-        <img>   = ng-src
-        <a>     = ng-href
-
-        loops   = ng-repeat
-
-    -->
-
-    <ul>
-        <li ng-repeat="warna in profile.data.warna" ng-attr="warna.id" ng-bind="warna.text"></li>
-    </ul>
-
+  <ion-content class="padding">
+    <img ng-src="assets/img/dp.jpg" style="width: 300px; height: 150px">
   </ion-content>
 </ion-view>

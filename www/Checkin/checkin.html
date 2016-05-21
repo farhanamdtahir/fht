@@ -1,4 +1,9 @@
-<ion-view view-title="Checkin">
-  <ion-content class="padding">
-  </ion-content>
+<ion-view view-title="Check Health" ng-controller="checkinCtrl as vm">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="d in vm.data" href="#/tab/checkin/{{ d.id }}">{{ d.name }}</ion-item>
+        </ion-list>
+        <!-- <pre>{{ vm.sickness | json }}</pre> -->
+    </ion-content>
 </ion-view>
+

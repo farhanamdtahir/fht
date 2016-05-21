@@ -2,8 +2,7 @@
     angular
         .module("fht.groups", [])
 
-        .controller('groupsCtrl', groupsCtrl)
-        
+        .controller('groupsregCtrl', groupsregCtrl)
 
     function GroupsFactory() {
         return false;

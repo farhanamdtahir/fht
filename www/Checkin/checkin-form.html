@@ -1,0 +1,14 @@
+<ion-view view-title="Check Health" ng-controller="checkinFormCtrl as vm">
+<ion-content class="padding">
+      <div class="list list-inset">
+          <label class="item item-input">
+              <textarea rows="5"  cription" placeholder="Description">{{ vm.description }}</textarea>
+          </label>
+          <label class="item item-input">
+              <input type="file" ng-model="vm.file_id">
+          </label>
+      </div>
+      <button class="button button-block button-calm" ng-click="vm.submit()">Submit</button>
+        <!--<pre>{{ vm | json }}</pre>-->
+    </ion-content>
+</ion-view>

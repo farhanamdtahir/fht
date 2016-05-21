@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Fever"
+    },
+    {
+        "id": 2,
+        "name": "Cough"
+    },
+    {
+        "id": 3,
+        "name": "Sneezing"
+    },
+    {
+        "id": 4,
+        "name": "Dizzy"
+    },
+    {
+        "id": 5,
+        "name": "Stomache"
+    },
+    {
+        "id": 6,
+        "name": "Wound"
+    },
+    {
+        "id": 7,
+        "name": "Headache"
+    },
+    {
+        "id": 8,
+        "name": "Nausea"
+    },
+    {
+        "id": 9,
+        "name": "Cramp"
+    },
+    {
+        "id": 10,
+        "name": "Fatigue"
+    }
+]
