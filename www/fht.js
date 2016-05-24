@@ -38,8 +38,8 @@
     }
 
     function Database($resource) {
-        // var url = 'http://192.168.43.193/fhtsserver';
-        var url = 'http://localhost/fhtserver';
+        // var url = 'http://192.168.43.193/fhtserver';
+        var url = 'http://localhost/fhtServer';
 
         return {
             profile: function() {
